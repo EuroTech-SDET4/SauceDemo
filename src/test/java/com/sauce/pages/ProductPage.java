@@ -23,6 +23,7 @@ public class ProductPage extends BasePage{
     public void sortProduct(String sortType){
         Select select = new Select(dropdownSort);
         select.selectByVisibleText(sortType);
+
     }
 
     public void addProduct(String price){

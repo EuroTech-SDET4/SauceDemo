@@ -25,6 +25,12 @@ public class CheckoutPage extends BasePage{
     @FindBy(xpath = "//div[text()='41.02']")
     public WebElement totalPrice;
 
+    @FindBy(id = "finish")
+    public WebElement finish;
+
+    @FindBy(tagName = "h2")
+    public WebElement confirmationMessage;
+
     public void enterDetails(String firstname,String lastName,String postcode){
         inputFirstName.sendKeys(firstname);
         inputLastName.sendKeys(lastName);

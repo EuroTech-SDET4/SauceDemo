@@ -70,4 +70,16 @@ public class LoginStepDefs {
         System.out.println("checkoutPage.getTotalPrice(price) = " + checkoutPage.getTotalPrice(price));
         Assert.assertEquals(expectedTotal,checkoutPage.getTotalPrice(price));
     }
+
+
+    @And("The user clicks finish button")
+    public void theUserClicksFinishButton() {
+        checkoutPage.finish.click();
+    }
+
+    @Then("The user able to see conformation message as a {string}")
+    public void theUserAbleToSeeConformationMessageAsA(String expectedMessage) {
+        Assert.assertEquals(expectedMessage,checkoutPage.confirmationMessage.getText());
+
+    }
 }
